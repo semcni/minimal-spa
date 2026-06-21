@@ -1,0 +1,59 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #f8f8f7;
+  --surface: #ffffff;
+  --border:  #e2e2e0;
+  --text:    #1a1a18;
+  --muted:   #6b6b68;
+  --accent:  #2563eb;
+  --radius:  8px;
+  --font:    system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Layout */
+.app   { max-width: 640px; margin: 0 auto; padding: 2rem 1rem; }
+.main  { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
+
+/* Header */
+.header         { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+.header__title  { font-size: 1.5rem; font-weight: 700; }
+.header__subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+
+/* Sections */
+.section      { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+.section h2   { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.hint         { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.1s;
+}
+.btn:hover { background: var(--bg); }
+
+/* Counter */
+.counter-display         { font-size: 1rem; margin-bottom: 0.75rem; }
+.counter-controls        { display: flex; gap: 0.5rem; }
+.local-counter           { display: flex; flex-direction: column; gap: 0.75rem; }
+
+/* Card list */
+.card-list               { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.card                    { display: flex; justify-content: space-between; padding: 0.6rem 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); }
+.card__label             { color: var(--muted); }
+.card__value             { font-weight: 600; }
